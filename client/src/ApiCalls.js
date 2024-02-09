@@ -3,7 +3,7 @@ export const GetDrivers = async () => {
 
   try {
 
-    const response = await fetch('https://p10-client.onrender.com/api/drivers', {
+    const response = await fetch('https://p10-server.onrender.com/api/drivers', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -31,7 +31,7 @@ export const GetDeadline = async () => {
 
   try {
 
-    const response = await fetch('https://p10-client.onrender.com/api/next_deadline', {
+    const response = await fetch('https://p10-server.onrender.com/api/next_deadline', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -60,7 +60,7 @@ export const PostPrediction = async (predJson) => {
 
   try {
 
-    const response = await fetch('https://p10-client.onrender.com/api/prediction', {
+    const response = await fetch('https://p10-server.onrender.com/api/prediction', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -113,7 +113,7 @@ export const PostTableRequest = async (predJson) => {
 export const PostPredHistoryRequest = async (formJson) => {
 
   try {
-    const response = await fetch('https://p10-client.onrender.com/api/predHistory', {
+    const response = await fetch('https://p10-server.onrender.com/api/predHistory', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
