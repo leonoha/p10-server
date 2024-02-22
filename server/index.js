@@ -8,8 +8,9 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 
-app.use(cors());
 app.use(express.json());
+
+app.use(cors({ origin: ["http://localhost:3000", "https://p10-client.onrender.com", "https://tranquil-creponne-a4920e.netlify.app"] }));
 
 fake_data = 
   [
@@ -45,7 +46,7 @@ fake_history = [
 
 
 // Add Access Control Allow Origin headers
-app.use((req, res, next) => {
+/*app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "https://p10-client.onrender.com");
     res.header(
       "Access-Control-Allow-Headers",
@@ -54,6 +55,7 @@ app.use((req, res, next) => {
     next();
 });
 
+*/
 
 app.get("/api", (req, res) => {
     res.json({ message: "GET Hello from server!" });
