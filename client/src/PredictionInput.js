@@ -5,6 +5,7 @@ import MovingCar from './MovingCar.js';
 import {StyledDeadlineDiv, StyledDeadlineLabel, StyledButton, StyledForm, StyledFormBoxDiv, StyledFormDiv, StyledInput, StyledInputDiv, StyledLabel, StyledSelect, StyledBackgroundDiv} from './styles/ComponentStyles.js'
 import {showSubmitFeedback} from './Utils.js'
 
+var deadline_info;
 
 //var deadline_info = await getNextDeadline();
 //var drivers = await getLatestDrivers();
