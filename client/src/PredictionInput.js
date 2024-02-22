@@ -6,8 +6,8 @@ import {StyledDeadlineDiv, StyledDeadlineLabel, StyledButton, StyledForm, Styled
 import {showSubmitFeedback} from './Utils.js'
 
 
-var deadline_info = await getNextDeadline();
-var drivers = await getLatestDrivers();
+//var deadline_info = await getNextDeadline();
+//var drivers = await getLatestDrivers();
 
 
 async function getLatestDrivers(){
