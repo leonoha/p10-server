@@ -66,13 +66,18 @@ function unixTimestampToDateTime(unixTimestamp) {
 
 function PredictionInput() {
     const [inputs, setInputs] = useState({});
-
-
-
+    const [drivers, setDrivers] = useState({});
+    const [deadlines, setDeadlines] = useState({});
 
     // Get the last inputted leaguename and username if available
     useEffect(() => {
-
+      getNextDeadline().then((deadline)=> {
+        setDeadlines(deadline);
+        deadline_info = deadline;
+      });
+      getLatestDrivers().then((drivs)=> {
+        setDrivers(drivs);
+      });
       const last_username = localStorage.getItem("last_username");
       const last_league = localStorage.getItem("last_league");
 
@@ -164,8 +169,8 @@ function PredictionInput() {
                   />
                 </StyledInputDiv>
                 <StyledDeadlineDiv>
-                  <StyledLabel>Deadline for {deadline_info.race_name} GP is:</StyledLabel>
-                  <StyledDeadlineLabel> {deadline_info.time} </StyledDeadlineLabel>
+                  <StyledLabel>Deadline for {deadlines.race_name} GP is:</StyledLabel>
+                  <StyledDeadlineLabel> {deadlines.time} </StyledDeadlineLabel>
                 </StyledDeadlineDiv>
 
                 <StyledButton type="submit">SUBMIT</StyledButton>
